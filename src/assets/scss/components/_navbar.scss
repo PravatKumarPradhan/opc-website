@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.navbar{
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    &__container{
+
+        @include flex-between;
+
+        height:90px;
+
+    }
+
+    &__logo img{
+
+        height:70px;
+
+    }
+
+    &__menu{
+
+        display:flex;
+
+        gap:40px;
+
+        li{
+
+            list-style:none;
+
+        }
+
+        a{
+
+            font-weight:600;
+
+            position:relative;
+
+            transition:.3s;
+
+            &:hover,
+            &.active{
+
+                color:$primary;
+
+            }
+
+        }
+
+    }
+
+}
