@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site-header{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    z-index:1000;
+}
+
+.top-bar{
+
+    background:#7f1d1d;
+    color:white;
+
+    padding:10px 0;
+
+    font-size:.9rem;
+
+    &__content{
+
+        @include flex-between;
+
+    }
+
+    &__right{
+
+        display:flex;
+        gap:18px;
+
+        a{
+
+            color:white;
+
+            transition:.3s;
+
+            &:hover{
+
+                color:$accent;
+
+            }
+
+        }
+
+    }
+
+}
